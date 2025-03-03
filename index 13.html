@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>تطبيق التسبيح</title>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Amiri', serif;
+      background: linear-gradient(135deg, #026937, #0e4d92);
+      color: #fff;
+      direction: rtl;
+      min-height: 100vh;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2.5em;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.9);
+      color: #000;
+      border: 2px solid #d4af37;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    .tasbeeh-text {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    .counter {
+      font-size: 1.2em;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+    .buttons {
+      text-align: center;
+      margin-top: 10px;
+    }
+    button {
+      background-color: #d4af37;
+      color: #fff;
+      border: none;
+      padding: 10px 15px;
+      font-size: 1em;
+      margin: 5px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #b38f2e;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>تطبيق التسبيح</h1>
+
+    <div class="card">
+      <p class="tasbeeh-text">سبحان الله</p>
+      <p>العداد: <span class="counter" id="counter1">0</span></p>
+      <div class="buttons">
+        <button onclick="increment('counter1')">زيادة</button>
+        <button onclick="resetCounter('counter1')">إعادة تعيين</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <p class="tasbeeh-text">الحمدلله</p>
+      <p>العداد: <span class="counter" id="counter2">0</span></p>
+      <div class="buttons">
+        <button onclick="increment('counter2')">زيادة</button>
+        <button onclick="resetCounter('counter2')">إعادة تعيين</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <p class="tasbeeh-text">لا إله إلا الله</p>
+      <p>العداد: <span class="counter" id="counter3">0</span></p>
+      <div class="buttons">
+        <button onclick="increment('counter3')">زيادة</button>
+        <button onclick="resetCounter('counter3')">إعادة تعيين</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <p class="tasbeeh-text">الله أكبر</p>
+      <p>العداد: <span class="counter" id="counter4">0</span></p>
+      <div class="buttons">
+        <button onclick="increment('counter4')">زيادة</button>
+        <button onclick="resetCounter('counter4')">إعادة تعيين</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <p class="tasbeeh-text">رب اغفر لي</p>
+      <p>العداد: <span class="counter" id="counter5">0</span></p>
+      <div class="buttons">
+        <button onclick="increment('counter5')">زيادة</button>
+        <button onclick="resetCounter('counter5')">إعادة تعيين</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <p class="tasbeeh-text">أستغفر الله</p>
+      <p>العداد: <span class="counter" id="counter6">0</span></p>
+      <div class="buttons">
+        <button onclick="increment('counter6')">زيادة</button>
+        <button onclick="resetCounter('counter6')">إعادة تعيين</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <p class="tasbeeh-text">لا حول ولا قوة إلا بالله</p>
+      <p>العداد: <span class="counter" id="counter7">0</span></p>
+      <div class="buttons">
+        <button onclick="increment('counter7')">زيادة</button>
+        <button onclick="resetCounter('counter7')">إعادة تعيين</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <p class="tasbeeh-text">اللهمَّ إنك عفوٌّ تُحبُّ العفوَ فاعفُ عنِّي</p>
+      <p>العداد: <span class="counter" id="counter8">0</span></p>
+      <div class="buttons">
+        <button onclick="increment('counter8')">زيادة</button>
+        <button onclick="resetCounter('counter8')">إعادة تعيين</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <p class="tasbeeh-text">اللهم صل وسلم وبارك على سيدنا محمد</p>
+      <p>العداد: <span class="counter" id="counter9">0</span></p>
+      <div class="buttons">
+        <button onclick="increment('counter9')">زيادة</button>
+        <button onclick="resetCounter('counter9')">إعادة تعيين</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <p class="tasbeeh-text">سبحان الله وبحمده سبحان الله العظيم</p>
+      <p>العداد: <span class="counter" id="counter10">0</span></p>
+      <div class="buttons">
+        <button onclick="increment('counter10')">زيادة</button>
+        <button onclick="resetCounter('counter10')">إعادة تعيين</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <p class="tasbeeh-text">اللهم اغفر لي ذنبي كله دقه وجله، علانيته وسره، وأوله وآخره.</p>
+      <p>العداد: <span class="counter" id="counter11">0</span></p>
+      <div class="buttons">
+        <button onclick="increment('counter11')">زيادة</button>
+        <button onclick="resetCounter('counter11')">إعادة تعيين</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <p class="tasbeeh-text">الله أكبر كبيرا والحمدلله كثيرا وسبحان الله وبحمده بكرةً وأصيلا.</p>
+      <p>العداد: <span class="counter" id="counter12">0</span></p>
+      <div class="buttons">
+        <button onclick="increment('counter12')">زيادة</button>
+        <button onclick="resetCounter('counter12')">إعادة تعيين</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <p class="tasbeeh-text">سبحان الله والحمد لله ولا إله إلا الله والله أكبر</p>
+      <p>العداد: <span class="counter" id="counter13">0</span></p>
+      <div class="buttons">
+        <button onclick="increment('counter13')">زيادة</button>
+        <button onclick="resetCounter('counter13')">إعادة تعيين</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <p class="tasbeeh-text">أستغفر الله الذى لا إله إلا هو الحي القيوم وأتوب إليه</p>
+      <p>العداد: <span class="counter" id="counter14">0</span></p>
+      <div class="buttons">
+        <button onclick="increment('counter14')">زيادة</button>
+        <button onclick="resetCounter('counter14')">إعادة تعيين</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <p class="tasbeeh-text">لا اله الا انت سبحانك إني كنت من الظالمين</p>
+      <p>العداد: <span class="counter" id="counter15">0</span></p>
+      <div class="buttons">
+        <button onclick="increment('counter15')">زيادة</button>
+        <button onclick="resetCounter('counter15')">إعادة تعيين</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <p class="tasbeeh-text">سبحان الله وبحمده عدد خلقه ورضا نفسه وزنة عرشه ومداد كلماته</p>
+      <p>العداد: <span class="counter" id="counter16">0</span></p>
+      <div class="buttons">
+        <button onclick="increment('counter16')">زيادة</button>
+        <button onclick="resetCounter('counter16')">إعادة تعيين</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <p class="tasbeeh-text">لا إله إلا الله وحده لا شريك لهُ ، لهُ الملك ، ولهُ الحمدُ ، وهو على كل شيء قدير</p>
+      <p>العداد: <span class="counter" id="counter17">0</span></p>
+      <div class="buttons">
+        <button onclick="increment('counter17')">زيادة</button>
+        <button onclick="resetCounter('counter17')">إعادة تعيين</button>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    function increment(counterId) {
+      var counterElement = document.getElementById(counterId);
+      var count = parseInt(counterElement.innerText);
+      counterElement.innerText = count + 1;
+    }
+
+    function resetCounter(counterId) {
+      document.getElementById(counterId).innerText = 0;
+    }
+  </script>
+</body>
+</html>
